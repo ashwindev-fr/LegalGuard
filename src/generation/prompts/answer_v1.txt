@@ -1,0 +1,27 @@
+Question:
+{question}
+
+Query analysis:
+{query_analysis}
+
+Evidence:
+{evidence}
+
+Graph facts:
+{graph_facts}
+
+Instructions:
+Synthesize a clear, authoritative legal answer based strictly on the retrieved evidence.
+Provide claim-level evidence IDs for every factual assertion.
+
+Return JSON in this format:
+{
+  "answer": "Direct answer with inline citation tags like [E001].",
+  "claims": [
+    {
+      "text": "Exact proposition claim",
+      "evidence_ids": ["E001"]
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,19 @@
+Question:
+{question}
+
+Retrieved Evidence:
+{evidence}
+
+Reason for Abstention:
+The retrieved legal evidence is insufficient, absent, or unverified for answering the query.
+
+Instructions:
+Refuse to speculate, fabricate, or rely on internal model memory.
+State clearly that the proposition cannot be verified from retrieved authoritative sources.
+
+Return JSON in this format:
+{
+  "answer": "I could not verify this proposition from the retrieved authoritative sources, so I cannot provide a reliable legal conclusion.",
+  "claims": [],
+  "uncertainties": ["Insufficient evidence retrieved to support claim."]
+}

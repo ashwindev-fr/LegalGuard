@@ -1,0 +1,26 @@
+Question:
+{question}
+
+Retrieved Authorities (Detected Conflict):
+{evidence}
+
+Instructions:
+The retrieved legal authorities contain conflicting or inconsistent propositions.
+Do not declare one authority implicitly 'correct' unless overruled or distinguished by the graph facts.
+Outline the conflicting positions, citing the relevant cases/dates/sections.
+
+Return JSON in this format:
+{
+  "answer": "Explanation of conflicting authorities with citations like [E001] and [E002].",
+  "claims": [
+    {
+      "text": "Position A in Case X",
+      "evidence_ids": ["E001"]
+    },
+    {
+      "text": "Position B in Case Y",
+      "evidence_ids": ["E002"]
+    }
+  ],
+  "uncertainties": ["Conflict between retrieved precedents."]
+}

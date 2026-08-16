@@ -1,0 +1,62 @@
+# Legal Source Configuration
+# Authority levels: 5=official primary, 4=official court, 3=official supporting, 2=reputable secondary, 1=secondary commentary, 0=unknown
+
+sources:
+  INDIA_CODE:
+    name: "India Code"
+    base_url: "https://www.indiacode.nic.in/"
+    authority_level: 5
+    document_types:
+      - ACT
+      - SECTION
+      - RULE
+      - REGULATION
+      - NOTIFICATION
+      - ORDER
+      - ORDINANCE
+    license_note: "Government of India official repository"
+
+  LEGISLATIVE_DEPT:
+    name: "Legislative Department, Government of India"
+    base_url: "https://www.legislative.gov.in/"
+    authority_level: 5
+    document_types:
+      - CONSTITUTION
+      - AMENDMENT
+    license_note: "Government of India official"
+
+  SUPREME_COURT:
+    name: "Supreme Court of India"
+    base_url: "https://www.sci.gov.in/"
+    authority_level: 5
+    document_types:
+      - JUDGMENT
+      - ORDER
+    license_note: "Supreme Court of India official"
+
+  ECOURTS:
+    name: "eCourts Judgments and Orders"
+    base_url: "https://judgments.ecourts.gov.in/"
+    authority_level: 4
+    document_types:
+      - JUDGMENT
+      - ORDER
+    license_note: "Government of India eCourts portal"
+
+  INDIAN_KANOON:
+    name: "Indian Kanoon"
+    base_url: "https://indiankanoon.org/"
+    authority_level: 2
+    document_types:
+      - JUDGMENT
+      - ACT
+    license_note: "Secondary legal database — prefer official sources when available"
+
+  LAW_COMMISSION:
+    name: "Law Commission of India"
+    base_url: "https://lawcommissionofindia.nic.in/"
+    authority_level: 3
+    document_types:
+      - REPORT
+      - RECOMMENDATION
+    license_note: "Government of India Law Commission"

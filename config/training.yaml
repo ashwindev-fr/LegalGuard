@@ -1,0 +1,44 @@
+# Training Configuration (QLoRA / LoRA)
+
+base_model: "Qwen/Qwen2.5-3B-Instruct"
+method: qlora
+epochs: 2
+learning_rate: 2e-4
+max_seq_length: 4096
+batch_size: 1
+gradient_accumulation_steps: 16
+warmup_ratio: 0.05
+weight_decay: 0.01
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+
+# Dataset split — by document, not by chunk
+split:
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+
+# Category balance (percentage)
+categories:
+  legal_qa: 20
+  citation_grounding: 15
+  abstention: 15
+  temporal_law: 10
+  conflicting_authority: 10
+  source_ranking: 10
+  explanation: 10
+  adversarial: 10
+
+output_dir: "./models/finetuned"
+save_adapter: true
+logging_steps: 10
+eval_steps: 50

@@ -1,0 +1,27 @@
+# Retrieval Configuration
+
+vector:
+  top_k: 20
+  similarity_threshold: 0.5
+
+lexical:
+  top_k: 20
+
+graph:
+  top_k: 20
+  max_hops: 2
+
+merge:
+  deduplication: true
+  final_top_k: 8
+
+scoring:
+  # final_score = w1*semantic + w2*lexical + w3*graph + w4*reranker + w5*authority + w6*temporal - w7*duplication
+  weights:
+    semantic_similarity: 0.25
+    lexical_score: 0.15
+    graph_relevance: 0.20
+    reranker_score: 0.25
+    authority_score: 0.10
+    temporal_validity: 0.05
+    duplication_penalty: 0.10

@@ -1,0 +1,79 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "indian-law-graphrag"
+version = "0.1.0"
+description = "Explainable Indian Law SLM with Neo4j GraphRAG"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "LegalGuard Team"}
+]
+
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "neo4j>=5.20.0",
+    "neo4j-graphrag>=1.0.0",
+    "PyMuPDF>=1.24.0",
+    "sentence-transformers>=3.0.0",
+    "transformers>=4.42.0",
+    "torch>=2.3.0",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.0",
+    "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+training = [
+    "peft>=0.11.0",
+    "trl>=0.9.0",
+    "datasets>=2.19.0",
+    "accelerate>=0.30.0",
+    "bitsandbytes>=0.43.0",
+]
+dev = [
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.0",
+    "ruff>=0.5.0",
+    "mypy>=1.10.0",
+    "httpx>=0.27.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pyright]
+pythonVersion = "3.11"
+venvPath = "."
+venv = ".venv"
+executionEnvironments = [
+  { root = "." }
+]
+
+

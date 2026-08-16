@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Neo4j data
+neo4j_data/
+neo4j_logs/
+
+# Models (large files)
+models/
+*.bin
+*.safetensors
+*.gguf
+
+# Data (downloaded legal documents - too large for git)
+data/raw/
+data/normalized/
+data/processed/
+data/temp_uploads/
+data/evaluation/results/
+
+
+# Cache
+cache/
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Test coverage
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+
+# ruff
+.ruff_cache/
